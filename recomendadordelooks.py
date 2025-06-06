@@ -157,3 +157,4 @@ if st.button("🔮 Me dá meu look!"):
     st.markdown("### 🎨 Paleta de cores para hoje:")
 
     st.image(paletas[clima], use_column_width=True) 
+    foto = st.file_uploader("Envie uma foto do seu rosto para análise de cor", type=["jpg", "jpeg", "png"])
