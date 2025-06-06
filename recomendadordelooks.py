@@ -126,25 +126,34 @@ looks = {
 
     "Teatro": ["Blazer + vestido + sapato fechado", "Macacão + salto"]
 
+}
+
+# BOTÃO DE RESULTADO ✨
 
 if st.button("🔮 Me dá meu look!"):
 
-    # Aqui começa a resposta
+    look = random.choice(looks[ocasião])
 
-    st.markdown(f"### ✅ Look para {ocasião}")
+    acessorios_escolhidos = acessorios_por_estilo[estilo]
 
-    st.write(f"🎯 Estilo: {estilo}")
+    st.markdown(f"## ✅ Seu look ideal para **{ocasião}**")
 
-    st.write(f"🌤️ Clima: {clima}")
+    st.write(f"👗 Sugestão: {look}")
 
-    st.write(f"🧠 Humor do dia: {humor}")
+    st.write(f"👟 Calçado preferido: {calçado}")
 
-    # Look fictício
+    st.write(f"🎯 Estilo: {estilo} | 🧠 Humor: {humor}")
 
-    st.success("👗 Sugestão: Calça jeans + regata + tênis branco")
+    st.write(f"🕒 Fora de casa: {tempo_fora} | 🚗 Transporte: {locomocao}")
+
+    st.write(f"🎨 Vibe de cor: {vibe_cor}")
 
     if acessorios != "Prefiro evitar":
 
-        st.markdown("### 💍 Acessórios indicados:")
+        st.markdown("### ✨ Acessórios que combinam com seu estilo:")
 
-        st.write("• Brincos pequenos\n• Bolsa lateral\n• Óculos escuros") 
+        st.write("• " + "\n• ".join(acessorios_escolhidos))
+
+    st.markdown("### 🎨 Paleta de cores para hoje:")
+
+    st.image(paletas[clima], use_column_width=True) 
