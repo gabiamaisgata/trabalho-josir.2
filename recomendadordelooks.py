@@ -127,3 +127,38 @@ looks = {
     "Teatro": ["Blazer + vestido + sapato fechado", "Macacão + salto"]
 
 }
+# Perguntas
+
+ocasião = st.selectbox("Qual a ocasião?", ["Faculdade", "Shopping", "Festa / Balada"])
+
+estilo = st.radio("Qual seu estilo?", ["Básico", "Fashionista"])
+
+clima = st.selectbox("Clima do dia:", ["Calor", "Frio"])
+
+humor = st.radio("Como você está se sentindo?", ["Confiante", "Preguiçosa"])
+
+acessorios = st.radio("Gosta de acessórios?", ["Sim, amo!", "Prefiro evitar"])
+
+# Botão de ação
+
+if st.button("🔮 Me dá meu look!"):
+
+    # Aqui começa a resposta
+
+    st.markdown(f"### ✅ Look para {ocasião}")
+
+    st.write(f"🎯 Estilo: {estilo}")
+
+    st.write(f"🌤️ Clima: {clima}")
+
+    st.write(f"🧠 Humor do dia: {humor}")
+
+    # Look fictício
+
+    st.success("👗 Sugestão: Calça jeans + regata + tênis branco")
+
+    if acessorios != "Prefiro evitar":
+
+        st.markdown("### 💍 Acessórios indicados:")
+
+        st.write("• Brincos pequenos\n• Bolsa lateral\n• Óculos escuros") 
