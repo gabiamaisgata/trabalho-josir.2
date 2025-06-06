@@ -154,6 +154,4 @@ if st.button("🔮 Me dá meu look!"):
 
         st.write("• " + "\n• ".join(acessorios_escolhidos))
 
-    st.markdown("### 🎨 Paleta de cores para hoje:")
-
-    st.image(paletas[clima], use_column_width=True) 
+   
