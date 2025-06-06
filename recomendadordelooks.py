@@ -126,20 +126,6 @@ looks = {
 
     "Teatro": ["Blazer + vestido + sapato fechado", "Macacão + salto"]
 
-}
-# Perguntas
-
-ocasião = st.selectbox("Qual a ocasião?", ["Faculdade", "Shopping", "Festa / Balada"])
-
-estilo = st.radio("Qual seu estilo?", ["Básico", "Fashionista"])
-
-clima = st.selectbox("Clima do dia:", ["Calor", "Frio"])
-
-humor = st.radio("Como você está se sentindo?", ["Confiante", "Preguiçosa"])
-
-acessorios = st.radio("Gosta de acessórios?", ["Sim, amo!", "Prefiro evitar"])
-
-# Botão de ação
 
 if st.button("🔮 Me dá meu look!"):
 
